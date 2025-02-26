@@ -1,14 +1,21 @@
 import React from 'react'
-import Dashboard from './components/Dashboard/Dashboard.jsx'
-import LoginPage from './components/Login_page/LoginPage.jsx'
+import Sidebar from './components/left_sidebar/Sidebar.jsx'
 import { Outlet } from 'react-router'
+
 
 function Layout() {
     return (
-        <>
-        <LoginPage/>
-        <Outlet/>
-        </>
+        
+        
+        
+        <div class="parent">
+            <Sidebar class="div1"/>
+            <Outlet class="div2"/>
+            
+        </div>
+
+
+        
     )
 }
 
