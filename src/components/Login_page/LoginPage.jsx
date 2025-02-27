@@ -31,6 +31,7 @@ function LoginPage() {
     }
 
     function checking(userId, password) {
+        
         if (userId === "admin" && password === "admin@123") {
             return "sidebar"
         }            
@@ -41,6 +42,7 @@ function LoginPage() {
 
     function handleSubmit(e) {
         e.preventDefault()
+        
         setError(validation(userId, password))
     }
 
@@ -65,8 +67,9 @@ function LoginPage() {
                     onChange={e => setPassword(e.target.value)} 
                     />
                 <p style={{color:"black", fontSize:"12px"}}>{error.password}</p>
-                <Link to={checking(userId, password)} id="navlink" type="submit" >Login</Link>
+                <Link to={checking(userId, password)} id="login-link" type="submit" >Login</Link>
                 {/* <button onClick={() => validation(userId, password)}>Login</button> */}
+                
             </div>
 
             </form> 

@@ -6,16 +6,12 @@ import { Outlet } from 'react-router'
 function Layout() {
     return (
         
-        
-        
-        <div class="parent">
+        <div class="parent-grid">
             <Sidebar class="div1"/>
             <Outlet class="div2"/>
             
         </div>
 
-
-        
     )
 }
 

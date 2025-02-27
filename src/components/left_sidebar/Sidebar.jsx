@@ -9,10 +9,19 @@ function Sidebar() {
 
                 <h2 className="sidebar-title">Dashboard</h2>
                 <ul className="sidebar-menu">
-                    <li className="link"><NavLink to="menu" style={{color: 'white', flex: 1}}>Menu</NavLink></li>
+                    <li className="link">
+                        <NavLink to="menu" 
+
+                            className={({ isActive }) =>
+                                isActive ? 'active-link' : 'inactive-link'
+                            }
+                                
+                             >Menu</NavLink>
+                             
+                    </li>
                     <li className="link"><NavLink to="menu1" style={{color: 'white'}}>Menu 1</NavLink></li>
-                    <li className="link"><NavLink style={{color: 'white'}}>Menu 2</NavLink></li>
-                    <li className="link"><NavLink style={{color: 'white'}}>Menu 3</NavLink></li>
+                    <li className="link"><NavLink to="menu2" style={{color: 'white'}}>Menu 2</NavLink></li>
+                    
                 </ul>
                 
             </div>
@@ -22,3 +31,4 @@ function Sidebar() {
 }
 
 export default Sidebar
+
