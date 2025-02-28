@@ -2,8 +2,6 @@ body {
   
   background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
   
-
-
 }
 
 .field_container {
@@ -19,7 +17,6 @@ body {
   border-radius: 10px;
   background-color: #ffffff32;
   width: auto;
-  
   
 }
 
@@ -83,11 +80,12 @@ input:focus {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
   gap: 20px;
+  
 }
   
 
 .active-link {
-  color: rgb(255, 44, 230);
+  color: gold;
 }
 
 .inactive-link {
@@ -96,8 +94,50 @@ input:focus {
 
 
 
+/* From Uiverse.io by Yaya12085 */ 
+.playstore-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 0.625rem 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  outline: 0;
+  transition: all  .2s ease;
+  text-decoration: none;
+  width: 220px;
+}
 
+.playstore-button:hover {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 1);
+}
 
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.texts {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.text-1 {
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-2 {
+  font-weight: 600;
+}
 
   
 

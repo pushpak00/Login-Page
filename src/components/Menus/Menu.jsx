@@ -1,37 +1,46 @@
-import React from 'react'
+import React, { useEffect, useState} from 'react'
 import { DataGrid } from '@mui/x-data-grid';
+
 
 function Menu() {
 
-    const columns = [
-        { field: 'id', headerName: 'ID', width: 90 },
-        { field: 'name', headerName: 'Name', width: 150 },
-        { field: 'age', headerName: 'Age', type: 'number', width: 110 },
-        { field: 'country', headerName: 'Country', width: 150 },
-      ];
-      
-      const rows = [
-        { id: 1, name: 'John', age: 25, country: 'USA' },
-        { id: 2, name: 'Anna', age: 30, country: 'Canada' },
-        { id: 3, name: 'David', age: 35, country: 'UK' },
-        { id: 4, name: 'Sophia', age: 28, country: 'Germany' },
-      ];
+    const [data, setData] = useState()
 
-
-    return(
-        <>
-        {/* <h1 style={{justifycontent: 'center', display:'block'}}>this is a menu </h1> */}
-
+    useEffect(()=> {
+        fetch('https://jsonplaceholder.typicode.com/todos/1/comments')
+        .then((response) => {
+        return response.json()
+        })
+        .then((data1) => {
+            setData(data1)           
+        })
         
-        <div >
-            <div style={{ height: 400, width: '100%' }}>
-                <DataGrid rows={rows} columns={columns} pageSize={5} />
+        }
+    ,[])
+    
+    const columns = [
+        { field: 'postId', headerName: 'Post ID', width:70},
+        { field: 'id', headerName: 'ID', width: 50 },
+        { field: 'name', headerName: 'Name', width: 230 },
+        { field: 'email', headerName: 'Email', width: 230 },
+        { field: 'body', headerName: 'Comment', width: 350 },
+      ];
+
+    // const postId1 = data.filter(tableData => tableData.postId === 1)
+    // const postMap = postId1.map(tableDataMap => 
+    //     <li>{tableDataMap.name}</li>
+    // )
+        
+    return(
+              
+        <div className="dataGrid">
+            <h2 style={{textAlign:'center'}}>Comments</h2>
+            <div  style={{ height: 600, width:'100%'}}>
+                <DataGrid rows={data} columns={columns} pageSize={1} />
             </div>
-               
+
         </div>
     
-
-        </>
     )
 }
 

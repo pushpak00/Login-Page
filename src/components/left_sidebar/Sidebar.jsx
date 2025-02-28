@@ -11,10 +11,11 @@ function Sidebar() {
                 <ul className="sidebar-menu">
                     <li className="link">
                         <NavLink to="menu" 
+                        style={{color: 'white'}}
 
-                            className={({ isActive }) =>
-                                isActive ? 'active-link' : 'inactive-link'
-                            }
+                            // className={({ isActive }) =>
+                            //     isActive ? 'active-link' : 'inactive-link'
+                            // }
                                 
                              >Menu</NavLink>
                              
