@@ -17,7 +17,15 @@ const router = createBrowserRouter([
   
   {
     path: "/",
-    element: <LoginPage />
+    element: 
+    // <div style={{textAlign:'justify'}}>
+    // <LoginPage  />
+    // </div>
+
+    <div class="flex-container">
+    <div class="flex-items"><LoginPage  /></div>
+    </div>
+
   },
   {
     path: "sidebar",

@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react'
 import { DataGrid } from '@mui/x-data-grid';
-
+import { Link } from 'react-router-dom'
 
 function Menu() {
 
@@ -34,7 +34,9 @@ function Menu() {
     return(
               
         <div className="dataGrid">
-            <h2 style={{textAlign:'center'}}>Comments</h2>
+            <h2 style={{textAlign:'center'}}>Comments  </h2> 
+           
+            
             <div  style={{ height: 600, width:'100%'}}>
                 <DataGrid rows={data} columns={columns} pageSize={1} />
             </div>

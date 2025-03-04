@@ -6,9 +6,9 @@ import { Outlet } from 'react-router'
 function Layout() {
     return (
         
-        <div class="parent-grid">
-            <Sidebar class="div1"/>
-            <Outlet class="div2"/>
+        <div className="parent-grid">
+            <div className="div1"><Sidebar /></div>
+            <div className="div2"><Outlet /></div>
             
         </div>
 

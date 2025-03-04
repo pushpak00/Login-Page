@@ -47,11 +47,15 @@ function LoginPage() {
     }
 
     return (
-        
-        <div>
+       
+
+
+
+        <div class="login-parent">
+           <div class="login-div1">
             <form onSubmit={handleSubmit}> 
-            <div className="field_container">
-                
+            <div className="login-card">
+            <h2 style={{color: "#002064"}}>Login</h2>
                 <input 
                     type="text"
                     placeholder="User Id" 
@@ -69,12 +73,17 @@ function LoginPage() {
                 <p style={{color:"black", fontSize:"12px"}}>{error.password}</p>
                 <Link to={checking(userId, password)} class="playstore-button" type="submit" >Login</Link>
                 {/* <button onClick={() => validation(userId, password)}>Login</button> */}
+                <br />
+                
+                <Link style={{color:"black" ,alignSelf:"right"}}>Sign Up</Link>
                 
             </div>
 
             </form> 
+            </div>
 
         </div>
+       
     )
 }
 

@@ -7,8 +7,10 @@ function Menu1() {
 
         <div>
             <h2>This is Menu1</h2>
+
             
         </div>
+        
     )
 }
 

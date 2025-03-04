@@ -22,6 +22,8 @@ function Sidebar() {
                     </li>
                     <li className="link"><NavLink to="menu1" style={{color: 'white'}}>Menu 1</NavLink></li>
                     <li className="link"><NavLink to="menu2" style={{color: 'white'}}>Menu 2</NavLink></li>
+                    <li className="link"><NavLink to="/" style={{color: 'red'}}>Logout</NavLink></li>
+            
                     
                 </ul>
                 
