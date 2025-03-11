@@ -16,7 +16,7 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1 );
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2 );
   height: auto;
   border: none;
   padding: 15px;
@@ -88,6 +88,13 @@ input:focus {
     
 }
 
+.sidebar-title {
+  color: white;
+  font-size: 22px;
+  align-content: center;
+  padding-top: 25px;
+}
+
 .parent-grid {
 
   display: grid;
@@ -99,8 +106,6 @@ input:focus {
 }
 
 .div1 {
-  
-  /* background-image: linear-gradient(0deg, #ff00ff 0%, #b8369a 100%); */
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 1;
@@ -175,8 +180,8 @@ input:focus {
 .login-parent {
   background-image: url("./Image/tibet-7157189.jpg");
   opacity: 7;
-    background-size: cover;
-    justify-content: center;
+  background-size: cover;
+  justify-content: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -192,7 +197,36 @@ input:focus {
     grid-row-start: 2;
   }
 
- 
+  .logout {
+    position: absolute;
+    top: 10px;  /* Top se 20px ka gap */
+    right: 10px; /* Right se 20px ka gap */
+    text-decoration: none; /* Underline ko hata dena */
+    font-size: 16px; /* Font size set karna */
+    color: #007BFF; /* Link ka color */
+    font-weight: bold;
+}
+
+.logout:hover {
+  color: #0056b3; /* Hover par color change */
+}
 
 
 
+
+/* .parent-dashboard {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+}
+  
+.div1-dashboard {
+  grid-row: span 5 / span 5;
+}
+
+.div2-dashboard {
+  grid-column: span 4 / span 4;
+  grid-row: span 5 / span 5;
+} */
+      

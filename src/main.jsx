@@ -8,6 +8,8 @@ import Sidebar from './components/left_sidebar/Sidebar.jsx'
 import LoginPage from './components/Login_page/LoginPage.jsx'
 import Menu1 from './components/Menus/Menu1'
 import Menu2 from './components/Menus/Menu2'
+import Store from './apps/Store.jsx'
+import { Provider } from 'react-redux'
 
 
 import Layout from './Layout.jsx'
@@ -49,7 +51,7 @@ const router = createBrowserRouter([
 ])
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <Provider store={Store}>
     <RouterProvider router={router} />
-  </StrictMode>,
+  </Provider>,
 )

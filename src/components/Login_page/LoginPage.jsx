@@ -48,9 +48,6 @@ function LoginPage() {
 
     return (
        
-
-
-
         <div class="login-parent">
            <div class="login-div1">
             <form onSubmit={handleSubmit}> 
@@ -62,16 +59,18 @@ function LoginPage() {
                     vlaue={userId}
                     onChange={e => setUserId(e.target.value)}
                     />
-                <p style={{color:"black", fontSize:"12px"}}>{error.userid}</p>
+                <p style={{color:"black", fontSize:"12px"}}><b>{error.userid}</b></p>
                 
                 <input
                     type="password"
                     placeholder="Password"
                     value={password}
                     onChange={e => setPassword(e.target.value)} 
-                    />
-                <p style={{color:"black", fontSize:"12px"}}>{error.password}</p>
-                <Link to={checking(userId, password)} class="playstore-button" type="submit" >Login</Link>
+                />
+                <p style={{color:"black", fontSize:"12px"}}><b>{error.password}</b></p>
+                <Link to={checking(userId, password)}  class="playstore-button" type="submit" >
+                    Login
+                </Link>
                 {/* <button onClick={() => validation(userId, password)}>Login</button> */}
                 <br />
                 

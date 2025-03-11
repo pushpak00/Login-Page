@@ -34,7 +34,7 @@ function Menu() {
     return(
               
         <div className="dataGrid">
-            <h2 style={{textAlign:'center'}}>Comments  </h2> 
+            <h2 style={{textAlign:'center'}}>Comments</h2> 
            
             
             <div  style={{ height: 600, width:'100%'}}>
